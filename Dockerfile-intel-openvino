@@ -1,0 +1,5 @@
+FROM docker.io/openvino/ubuntu20_data_runtime:2021.3
+WORKDIR /workspace
+RUN python3 -m pip install --no-cache-dir --upgrade pip && python3 -m pip install --no-cache-dir imutils==0.5.4
+COPY app.py app.py
+CMD ["/bin/bash", "-ic", "python3 app.py"]

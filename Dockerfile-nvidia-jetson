@@ -1,0 +1,6 @@
+FROM nvcr.io/nvidia/l4t-ml:r32.5.0-py3
+WORKDIR /workspace
+RUN apt-get update
+RUN apt-get install -y libcanberra-gtk-module && python3 -m pip install --no-cache-dir --upgrade pip && python3 -m pip install --no-cache-dir imutils==0.5.4
+COPY app.py app.py
+CMD ["/bin/bash", "-ic", "python3 app.py"]
