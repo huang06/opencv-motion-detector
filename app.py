@@ -3,11 +3,13 @@
 Reference: <https://github.com/methylDragon/opencv-motion-detector>
 """
 
+from __future__ import annotations
+
 import sys
+
 import cv2
 import imutils
 import numpy as np
-
 
 device_index = int(sys.argv[1]) if len(sys.argv) > 1 else 0
 
@@ -126,8 +128,8 @@ while True:
     cv2.putText(frame, str(text), (10, 35), font, 0.75, (255, 255, 255), 2, cv2.LINE_AA)
 
     # For if you want to show the individual video frames
-#    cv2.imshow("frame", frame)
-#    cv2.imshow("delta", frame_delta)
+    # cv2.imshow("frame", frame)
+    # cv2.imshow("delta", frame_delta)
 
     # Convert the frame_delta to color for splicing
     frame_delta = cv2.cvtColor(frame_delta, cv2.COLOR_GRAY2BGR)
