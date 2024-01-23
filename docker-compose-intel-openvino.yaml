@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-intel-openvino
-    image: my-company.co:1443/public/opencv-motion-detector:ubuntu20-2021.3
+    image: my-registry/public/opencv-motion-detector:ubuntu20-2021.3
     environment:
       - DISPLAY
     volumes:

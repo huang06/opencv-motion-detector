@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-nvidia-jetson
-    image: my-company.co:1443/public/opencv-motion-detector:r32.5.0
+    image: my-registry/public/opencv-motion-detector:r32.5.0
     environment:
       - DISPLAY
     volumes:
