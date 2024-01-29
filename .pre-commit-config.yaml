@@ -31,11 +31,11 @@ repos:
     hooks:
       - id: yamllint
   - repo: https://github.com/PyCQA/flake8
-    rev: 7.0.0
+    rev: 5.0.4
     hooks:
       - id: flake8
   - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+    rev: 5.11.5
     hooks:
       - id: isort
         name: Sort imports in Python files
@@ -46,7 +46,7 @@ repos:
         additional_dependencies:
           - types-PyYAML
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v3.1.0
+    rev: v2.4.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
